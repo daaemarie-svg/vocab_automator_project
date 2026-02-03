@@ -1,0 +1,32 @@
+[INPUT DATA]
+Current Vocab (List A): [INSERT_DAY_18_LIST]
+Ghost Vocab (List B): [INSERT_DAY_17_LIST]
+Grammar Overlay: [e.g., S-V Agreement / Passive vs Active / Relative Clauses]
+Error Density: [e.g., 5-7 errors across 15 sentences]
+
+[1. THE "BUG" ARCHITECTURE (STRICT)]
+- Generate 15-20 academic sentences.
+- Interleaving: Every sentence must include at least one bolded word from List A and one from List B.
+- Error Types: "Bugs" must be a mix of:
+    1. Syntactic Traps: Violation of the [GRAMMAR_OVERLAY].
+    2. Logic Traps: A bolded word from List A is used in a contextually impossible way (e.g., 'The enterprise expanded by shutting down all its plants').
+    3. Form Traps: Using a noun form where an adjective is required (Syntax 2.0 logic).
+
+[2. THE STUDENT VIEW (STRICT)]
+지시 사항: 다음 문장들을 검토하고 '버그(오류)'를 찾으십시오. 오류가 있는 문장의 번호를 쓰고, 올바른 형태로 수정하십시오. 모든 굵게 표시된 단어의 쓰임이 적절한지 확인하십시오.
+Review the following sentences and find the 'Bugs' (Errors). Write the number of the incorrect sentence and provide the corrected version. Verify that all bolded words are used correctly.
+
+[3. THE LOGICAL DEBUGGER (TEACHER KEY)]
+- Format:
+  Q: [Sentence Number]
+  Status: {{ BUG }} or {{ CLEAN }}
+  Correction: [Full corrected sentence]
+  Bilingual Rationale (Audit):
+    - 1. The Conflict: [Explain the logical or grammatical friction in English/Korean]
+    - 2. The Fix: [Explain why the correction satisfies the [GRAMMAR_OVERLAY] or logic]
+
+[4. FINAL AUDIT REPORT]
+- Provide a 3-line report at the bottom: 
+  1. Bug Count: [Actual count of errors generated]
+  2. Overlay Match: [Confirmed - All bugs relate to input grammar/vocab]
+  3. Ghost Coverage: [Count of List B words used as anchor points]

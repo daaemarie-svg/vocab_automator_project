@@ -1,0 +1,33 @@
+# ROLE: Senior ESL Curriculum Architect
+# TASK: Generate [VERSION_LETTER] of a high-rigor Narrative Passage and Audit.
+
+[INPUT DATA]
+Current Vocab (List A): [INSERT]
+Legacy Vocab (List B): [INSERT]
+Grammar Overlay: [INSERT]
+Target Version: [A or B]
+
+[1. ARCHITECTURE (STRICT - STUDENT VIEW)]
+- Word Count: 150-200 words.
+- Bolding: Bold ENTIRE words (e.g., **constructed**).
+- Legacy Interleaving: Mix 5+ words from List A and 5+ words from List B.
+- The Hidden Bug: Intentionally hide ONE logical contradiction in the text.
+- Note: If this is Version B, the storyline and "Bug" must be entirely different from Version A.
+
+[2. QUESTION RIGOR (STRICT - STUDENT VIEW)]
+- Use ① ② ③ ④ ⑤ for choices on NEW LINES.
+Q1 (Main Idea): 위 글의 내용과 가장 일치하는 것은?
+Q2 (Syntactic Debugging): (_______) Blank + 4 suffix-trap choices based on a List A root.
+Q3 (The Logic Bug): 위 글에서 논리적으로 가장 어색한 문장은? (Sentence starters as choices).
+Q4 (Sentence Insertion): Insert a sentence with a List B word at [A], [B], [C], or [D].
+
+[3. TEACHER'S INSTRUMENTATION (STRICT - TEACHER ONLY)]
+- Mirror Translation: Professional Korean translation of the passage.
+- Instruction Mirror: English translations for all Korean questions/options.
+- Answer & Rationale: {{ # }} + Detailed Bilingual explanation (English & Korean).
+- The Bug Breakdown: Identify and explain the "Bug" for this specific version.
+
+[4. FINAL AUDIT REPORT]
+- 1. Version Label: [A or B]
+- 2. Bug Check: [Confirmed]
+- 3. Interleaving Count: [List A/List B counts]
