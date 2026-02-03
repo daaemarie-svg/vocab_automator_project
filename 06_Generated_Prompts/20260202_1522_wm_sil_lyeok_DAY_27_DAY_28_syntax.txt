@@ -1,0 +1,336 @@
+🏗️ Module: Syntax (Automated Version)
+
+[STRICT RULE]: Generate exactly 10 questions for Version A and 10 questions for Version B.
+[STRICT RULE]: Restart numbering for Version B (1-10).
+[STRICT RULE]: Ensure every word in the [VOCAB_LIST] is used at least once across the 20 total questions to ensure full rotation.
+[STRICT RULE]: Randomization Key: Before each version, output: "RANDOMIZATION KEY A: [10 letters]" and "RANDOMIZATION KEY B: [10 letters]". Max 3 of any letter (A, B, C, D) per version. No triple repeats.
+[STRICT RULE]: Distractor Logic (40/40/20): 40% Word Class (Noun/Adj/Adv swap), 40% Functional (Grammar Overlay: Present continuous tense), 20% Semantic nuance traps.
+
+[FORMATTING RULE]: After generating the 20 questions, you MUST provide a MARKDOWN TABLE containing all 20 questions for easy data extraction. Use these exact columns:
+| Version | Q_Num | Sentence_Stem | Option_A | Option_B | Option_C | Option_D | Correct_Ans |
+[STRICT RULE]: In the "Sentence_Stem" column, use a double underscore (__) for the blank space.
+
+
+[INPUT DATA]
+Vocabulary List: [
+  {
+    "word": "farm",
+    "meaning": "농장",
+    "bolded": "**farm**"
+  },
+  {
+    "word": "field",
+    "meaning": "밭",
+    "bolded": "**field**"
+  },
+  {
+    "word": "cowboy",
+    "meaning": "카우보이, 목동",
+    "bolded": "**cowboy**"
+  },
+  {
+    "word": "horse",
+    "meaning": "말",
+    "bolded": "**horse**"
+  },
+  {
+    "word": "bull",
+    "meaning": "황소",
+    "bolded": "**bull**"
+  },
+  {
+    "word": "chicken",
+    "meaning": "닭",
+    "bolded": "**chicken**"
+  },
+  {
+    "word": "goat",
+    "meaning": "염소",
+    "bolded": "**goat**"
+  },
+  {
+    "word": "pig",
+    "meaning": "돼지",
+    "bolded": "**pig**"
+  },
+  {
+    "word": "buffalo",
+    "meaning": "버팔로, 물소, 들소",
+    "bolded": "**buffalo**"
+  },
+  {
+    "word": "crop",
+    "meaning": "(농)작물; 수확량",
+    "bolded": "**crop**"
+  },
+  {
+    "word": "meadow",
+    "meaning": "목초지, 초원",
+    "bolded": "**meadow**"
+  },
+  {
+    "word": "barn",
+    "meaning": "헛간",
+    "bolded": "**barn**"
+  },
+  {
+    "word": "hay",
+    "meaning": "건초",
+    "bolded": "**hay**"
+  },
+  {
+    "word": "harvest",
+    "meaning": "수확하다",
+    "bolded": "**harvest**"
+  },
+  {
+    "word": "calf",
+    "meaning": "송아지",
+    "bolded": "**calf**"
+  },
+  {
+    "word": "cattle",
+    "meaning": "소",
+    "bolded": "**cattle**"
+  },
+  {
+    "word": "lay",
+    "meaning": "알을 낳다; ~을 …에 두다",
+    "bolded": "**lay**"
+  },
+  {
+    "word": "cotton",
+    "meaning": "면",
+    "bolded": "**cotton**"
+  },
+  {
+    "word": "shepherd",
+    "meaning": "양치기",
+    "bolded": "**shepherd**"
+  },
+  {
+    "word": "farmhouse",
+    "meaning": "농가, 농가에 딸린 집",
+    "bolded": "**farmhouse**"
+  },
+  {
+    "word": "cultivate",
+    "meaning": "경작하다, 재배하다",
+    "bolded": "**cultivate**"
+  },
+  {
+    "word": "orchard",
+    "meaning": "과수원",
+    "bolded": "**orchard**"
+  },
+  {
+    "word": "shed",
+    "meaning": "(작은) 헛간, 오두막; 창고",
+    "bolded": "**shed**"
+  },
+  {
+    "word": "ranch",
+    "meaning": "농장, 목축장",
+    "bolded": "**ranch**"
+  },
+  {
+    "word": "pasture",
+    "meaning": "목장; 방목하다",
+    "bolded": "**pasture**"
+  },
+  {
+    "word": "scarecrow",
+    "meaning": "허수아비",
+    "bolded": "**scarecrow**"
+  },
+  {
+    "word": "livestock",
+    "meaning": "가축류",
+    "bolded": "**livestock**"
+  },
+  {
+    "word": "vineyard",
+    "meaning": "포도밭, 포도원",
+    "bolded": "**vineyard**"
+  },
+  {
+    "word": "take care of",
+    "meaning": "~을 돌보다",
+    "bolded": "**take care of**"
+  },
+  {
+    "word": "run away",
+    "meaning": "도망치다, 달아나다",
+    "bolded": "**run away**"
+  },
+  {
+    "word": "bloom",
+    "meaning": "꽃, 개화; 꽃이 피다, 개화하다",
+    "bolded": "**bloom**"
+  },
+  {
+    "word": "fruit",
+    "meaning": "열매, 과일; 결과, 성과",
+    "bolded": "**fruit**"
+  },
+  {
+    "word": "grass",
+    "meaning": "풀, 잔디; 잔디밭",
+    "bolded": "**grass**"
+  },
+  {
+    "word": "weed",
+    "meaning": "잡초; ~의 잡초를 뽑다",
+    "bolded": "**weed**"
+  },
+  {
+    "word": "seed",
+    "meaning": "씨앗, 종자",
+    "bolded": "**seed**"
+  },
+  {
+    "word": "sprout",
+    "meaning": "새싹; 싹이 나다, 발아하다",
+    "bolded": "**sprout**"
+  },
+  {
+    "word": "bud",
+    "meaning": "(식물의) 눈, 봉오리",
+    "bolded": "**bud**"
+  },
+  {
+    "word": "petal",
+    "meaning": "꽃잎",
+    "bolded": "**petal**"
+  },
+  {
+    "word": "root",
+    "meaning": "뿌리; 뿌리 뽑다 (out)",
+    "bolded": "**root**"
+  },
+  {
+    "word": "stem",
+    "meaning": "(식물의) 줄기, 대; 유래하다, 시작되다 (from)",
+    "bolded": "**stem**"
+  },
+  {
+    "word": "thorn",
+    "meaning": "가시",
+    "bolded": "**thorn**"
+  },
+  {
+    "word": "branch",
+    "meaning": "나뭇가지; 분점, 지점",
+    "bolded": "**branch**"
+  },
+  {
+    "word": "bough",
+    "meaning": "(나무의) 큰 가지",
+    "bolded": "**bough**"
+  },
+  {
+    "word": "maple",
+    "meaning": "단풍나무",
+    "bolded": "**maple**"
+  },
+  {
+    "word": "bamboo",
+    "meaning": "대나무",
+    "bolded": "**bamboo**"
+  },
+  {
+    "word": "needle",
+    "meaning": "(침엽수의) 바늘처럼 뾰족한 잎; 바늘",
+    "bolded": "**needle**"
+  },
+  {
+    "word": "pine tree",
+    "meaning": "소나무",
+    "bolded": "**pine tree**"
+  },
+  {
+    "word": "cherry tree",
+    "meaning": "벚나무",
+    "bolded": "**cherry tree**"
+  },
+  {
+    "word": "cactus",
+    "meaning": "선인장",
+    "bolded": "**cactus**"
+  },
+  {
+    "word": "trunk",
+    "meaning": "나무의 몸통 부분; 코끼리의 코",
+    "bolded": "**trunk**"
+  },
+  {
+    "word": "bark",
+    "meaning": "나무껍질; (개가) 짖다 (at)",
+    "bolded": "**bark**"
+  },
+  {
+    "word": "fertilizer",
+    "meaning": "비료",
+    "bolded": "**fertilizer**"
+  },
+  {
+    "word": "bush",
+    "meaning": "관목, 작은 나무들이 우거진 관목 숲",
+    "bolded": "**bush**"
+  },
+  {
+    "word": "palm",
+    "meaning": "야자수; 손바닥",
+    "bolded": "**palm**"
+  },
+  {
+    "word": "bulb",
+    "meaning": "구근, 알뿌리; 전구",
+    "bolded": "**bulb**"
+  },
+  {
+    "word": "poisonous",
+    "meaning": "독이 있는",
+    "bolded": "**poisonous**"
+  },
+  {
+    "word": "herb",
+    "meaning": "약초, 허브",
+    "bolded": "**herb**"
+  },
+  {
+    "word": "cut off",
+    "meaning": "잘라내다; 차단하다",
+    "bolded": "**cut off**"
+  },
+  {
+    "word": "little by little",
+    "meaning": "조금씩, 천천히",
+    "bolded": "**little by little**"
+  },
+  {
+    "word": "day by day",
+    "meaning": "나날이, 서서히",
+    "bolded": "**day by day**"
+  }
+]
+Grammar Overlay: Present continuous tense (현재 진행형)
+Target Word Count: 60
+
+Role: ESL Curriculum Developer (Naeshin Prep) 
+Task: Generate two distinct versions (A & B) of a vocabulary assessment using the Vocabulary List provided. 
+
+Instructions (Bilingual):
+문맥과 문법에 알맞은 단어의 형태를 고르시오. 각 문항에서 10점 만점을 받으려면 문법적 함정을 정당화할 수 있어야 합니다.
+Choose the correct form of the word. To earn the full 10 points per question, you must be able to justify the grammatical trap.
+
+[STRICT RULE]: Every sentence must use at least 2 words from the target list (Interleaving).
+[STRICT RULE]: You must integrate the Grammar Overlay into at least 40% of the sentence stems.
+[STRICT RULE]: No correct answers in bold. All choices (A, B, C, D) must look identical in formatting.
+[STRICT RULE]: Bilingual:Instructions and Teacher Key must be English/Korean.
+
+Teacher Key (Bilingual Rationale)
+Show how the Grammar Overlay was applied. Wrap answers in {{ }}.
+Follow this exact format for every question:
+Q1 Answer: {{ (Letter) }}
+Rationale: [Brief explanation of why that specific form is required].

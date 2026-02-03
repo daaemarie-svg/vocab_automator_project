@@ -1,0 +1,427 @@
+🏗️ Module: Audit (Automated Version)
+[INPUT DATA]
+Vocabulary List: [
+  {
+    "word": "pants",
+    "meaning": "바지",
+    "bolded": "**pants**"
+  },
+  {
+    "word": "belt",
+    "meaning": "벨트, 허리띠",
+    "bolded": "**belt**"
+  },
+  {
+    "word": "shirt",
+    "meaning": "셔츠",
+    "bolded": "**shirt**"
+  },
+  {
+    "word": "skirt",
+    "meaning": "치마",
+    "bolded": "**skirt**"
+  },
+  {
+    "word": "socks",
+    "meaning": "양말",
+    "bolded": "**socks**"
+  },
+  {
+    "word": "shoes",
+    "meaning": "신발",
+    "bolded": "**shoes**"
+  },
+  {
+    "word": "hat",
+    "meaning": "(테가 있는) 모자",
+    "bolded": "**hat**"
+  },
+  {
+    "word": "cap",
+    "meaning": "(앞에 챙이 달린) 모자",
+    "bolded": "**cap**"
+  },
+  {
+    "word": "sweater",
+    "meaning": "스웨터",
+    "bolded": "**sweater**"
+  },
+  {
+    "word": "jacket",
+    "meaning": "재킷, 상의",
+    "bolded": "**jacket**"
+  },
+  {
+    "word": "gloves",
+    "meaning": "장갑",
+    "bolded": "**gloves**"
+  },
+  {
+    "word": "pocket",
+    "meaning": "주머니",
+    "bolded": "**pocket**"
+  },
+  {
+    "word": "clothes",
+    "meaning": "옷, 의복",
+    "bolded": "**clothes**"
+  },
+  {
+    "word": "wear",
+    "meaning": "입다, 쓰다, 신다",
+    "bolded": "**wear**"
+  },
+  {
+    "word": "fashion",
+    "meaning": "패션",
+    "bolded": "**fashion**"
+  },
+  {
+    "word": "design",
+    "meaning": "디자인[설계]하다; 디자인, 설계",
+    "bolded": "**design**"
+  },
+  {
+    "word": "popular",
+    "meaning": "인기 있는, 대중적인",
+    "bolded": "**popular**"
+  },
+  {
+    "word": "style",
+    "meaning": "스타일; 방식",
+    "bolded": "**style**"
+  },
+  {
+    "word": "put on",
+    "meaning": "~을 입다[신다, 쓰다]",
+    "bolded": "**put on**"
+  },
+  {
+    "word": "take off",
+    "meaning": "~을 벗다; (비행기가) 이륙하다",
+    "bolded": "**take off**"
+  },
+  {
+    "word": "subway",
+    "meaning": "지하철",
+    "bolded": "**subway**"
+  },
+  {
+    "word": "bike",
+    "meaning": "자전거",
+    "bolded": "**bike**"
+  },
+  {
+    "word": "airplane",
+    "meaning": "비행기",
+    "bolded": "**airplane**"
+  },
+  {
+    "word": "truck",
+    "meaning": "트럭",
+    "bolded": "**truck**"
+  },
+  {
+    "word": "boat",
+    "meaning": "보트, 배",
+    "bolded": "**boat**"
+  },
+  {
+    "word": "ride",
+    "meaning": "타다, 몰다",
+    "bolded": "**ride**"
+  },
+  {
+    "word": "street",
+    "meaning": "거리, 도로",
+    "bolded": "**street**"
+  },
+  {
+    "word": "road",
+    "meaning": "도로, 길",
+    "bolded": "**road**"
+  },
+  {
+    "word": "drive",
+    "meaning": "운전하다",
+    "bolded": "**drive**"
+  },
+  {
+    "word": "right",
+    "meaning": "오른쪽; 오른쪽의; 오른쪽으로",
+    "bolded": "**right**"
+  },
+  {
+    "word": "left",
+    "meaning": "왼쪽; 왼쪽의; 왼쪽으로",
+    "bolded": "**left**"
+  },
+  {
+    "word": "block",
+    "meaning": "막다, 차단하다; 블록, 구역",
+    "bolded": "**block**"
+  },
+  {
+    "word": "straight",
+    "meaning": "곧은, 똑바른; 똑바로, 곧장",
+    "bolded": "**straight**"
+  },
+  {
+    "word": "bridge",
+    "meaning": "다리",
+    "bolded": "**bridge**"
+  },
+  {
+    "word": "across",
+    "meaning": "가로질러, 맞은편에",
+    "bolded": "**across**"
+  },
+  {
+    "word": "sign",
+    "meaning": "표지판; 서명하다",
+    "bolded": "**sign**"
+  },
+  {
+    "word": "corner",
+    "meaning": "모퉁이, 구석",
+    "bolded": "**corner**"
+  },
+  {
+    "word": "stop",
+    "meaning": "멈추다; 정류장",
+    "bolded": "**stop**"
+  },
+  {
+    "word": "get on",
+    "meaning": "~에 타다",
+    "bolded": "**get on**"
+  },
+  {
+    "word": "hurry up",
+    "meaning": "서두르다",
+    "bolded": "**hurry up**"
+  }
+]
+Grammar Overlay: Emphatic structures (강조구문)
+Target Word Count: 40
+Error Density: [ERROR_DENSITY]
+
+Role: ESL Quality Assurance Lead (Naeshin Specialist) 
+Task: Generate 15-20 sentences. Some are correct; some contain "Bugs" (Errors). 
+Errors must be a mix of Vocabulary Misuse and Grammar Overlay violations.
+
+Strict Rules:
+[STRICT RULE]: Generate exactly 10 questions for Version A and 10 questions for Version B. [cite: 2026-01-08]
+[STRICT RULE]: Focus on "Audit" logic: provide a sentence where the target word is used INCORRECTLY (wrong word class or suffix). Students must identify and fix it. [cite: 2026-02-01]
+[STRICT RULE]: Randomization Key: Output "RANDOMIZATION KEY A/B" (10 letters) before each version. [cite: 2026-02-01]
+[STRICT RULE]: Use the Emphatic structures (강조구문) to create the "trap" in the audit sentence. [cite: 2026-02-01]
+[STRICT RULE]: Every word in [
+  {
+    "word": "pants",
+    "meaning": "바지",
+    "bolded": "**pants**"
+  },
+  {
+    "word": "belt",
+    "meaning": "벨트, 허리띠",
+    "bolded": "**belt**"
+  },
+  {
+    "word": "shirt",
+    "meaning": "셔츠",
+    "bolded": "**shirt**"
+  },
+  {
+    "word": "skirt",
+    "meaning": "치마",
+    "bolded": "**skirt**"
+  },
+  {
+    "word": "socks",
+    "meaning": "양말",
+    "bolded": "**socks**"
+  },
+  {
+    "word": "shoes",
+    "meaning": "신발",
+    "bolded": "**shoes**"
+  },
+  {
+    "word": "hat",
+    "meaning": "(테가 있는) 모자",
+    "bolded": "**hat**"
+  },
+  {
+    "word": "cap",
+    "meaning": "(앞에 챙이 달린) 모자",
+    "bolded": "**cap**"
+  },
+  {
+    "word": "sweater",
+    "meaning": "스웨터",
+    "bolded": "**sweater**"
+  },
+  {
+    "word": "jacket",
+    "meaning": "재킷, 상의",
+    "bolded": "**jacket**"
+  },
+  {
+    "word": "gloves",
+    "meaning": "장갑",
+    "bolded": "**gloves**"
+  },
+  {
+    "word": "pocket",
+    "meaning": "주머니",
+    "bolded": "**pocket**"
+  },
+  {
+    "word": "clothes",
+    "meaning": "옷, 의복",
+    "bolded": "**clothes**"
+  },
+  {
+    "word": "wear",
+    "meaning": "입다, 쓰다, 신다",
+    "bolded": "**wear**"
+  },
+  {
+    "word": "fashion",
+    "meaning": "패션",
+    "bolded": "**fashion**"
+  },
+  {
+    "word": "design",
+    "meaning": "디자인[설계]하다; 디자인, 설계",
+    "bolded": "**design**"
+  },
+  {
+    "word": "popular",
+    "meaning": "인기 있는, 대중적인",
+    "bolded": "**popular**"
+  },
+  {
+    "word": "style",
+    "meaning": "스타일; 방식",
+    "bolded": "**style**"
+  },
+  {
+    "word": "put on",
+    "meaning": "~을 입다[신다, 쓰다]",
+    "bolded": "**put on**"
+  },
+  {
+    "word": "take off",
+    "meaning": "~을 벗다; (비행기가) 이륙하다",
+    "bolded": "**take off**"
+  },
+  {
+    "word": "subway",
+    "meaning": "지하철",
+    "bolded": "**subway**"
+  },
+  {
+    "word": "bike",
+    "meaning": "자전거",
+    "bolded": "**bike**"
+  },
+  {
+    "word": "airplane",
+    "meaning": "비행기",
+    "bolded": "**airplane**"
+  },
+  {
+    "word": "truck",
+    "meaning": "트럭",
+    "bolded": "**truck**"
+  },
+  {
+    "word": "boat",
+    "meaning": "보트, 배",
+    "bolded": "**boat**"
+  },
+  {
+    "word": "ride",
+    "meaning": "타다, 몰다",
+    "bolded": "**ride**"
+  },
+  {
+    "word": "street",
+    "meaning": "거리, 도로",
+    "bolded": "**street**"
+  },
+  {
+    "word": "road",
+    "meaning": "도로, 길",
+    "bolded": "**road**"
+  },
+  {
+    "word": "drive",
+    "meaning": "운전하다",
+    "bolded": "**drive**"
+  },
+  {
+    "word": "right",
+    "meaning": "오른쪽; 오른쪽의; 오른쪽으로",
+    "bolded": "**right**"
+  },
+  {
+    "word": "left",
+    "meaning": "왼쪽; 왼쪽의; 왼쪽으로",
+    "bolded": "**left**"
+  },
+  {
+    "word": "block",
+    "meaning": "막다, 차단하다; 블록, 구역",
+    "bolded": "**block**"
+  },
+  {
+    "word": "straight",
+    "meaning": "곧은, 똑바른; 똑바로, 곧장",
+    "bolded": "**straight**"
+  },
+  {
+    "word": "bridge",
+    "meaning": "다리",
+    "bolded": "**bridge**"
+  },
+  {
+    "word": "across",
+    "meaning": "가로질러, 맞은편에",
+    "bolded": "**across**"
+  },
+  {
+    "word": "sign",
+    "meaning": "표지판; 서명하다",
+    "bolded": "**sign**"
+  },
+  {
+    "word": "corner",
+    "meaning": "모퉁이, 구석",
+    "bolded": "**corner**"
+  },
+  {
+    "word": "stop",
+    "meaning": "멈추다; 정류장",
+    "bolded": "**stop**"
+  },
+  {
+    "word": "get on",
+    "meaning": "~에 타다",
+    "bolded": "**get on**"
+  },
+  {
+    "word": "hurry up",
+    "meaning": "서두르다",
+    "bolded": "**hurry up**"
+  }
+] must be audited at least once across both versions. [cite: 2026-02-01]
+[STRICT RULE]: Bilingual:Instructions and Teacher Key must be English/Korean.
+
+Teacher Key (The Logical Debugger)
+Follow the "Danielle Marie" Manifesto: Precision is Kindness.
+For every "Bug," provide a 3-Step Audit rationale:
+1. RESTATE: What is the sentence trying to say?
+2. IDENTIFY THE BUG: Where does the logic or vocabulary fail?
+3. SYNTAX/GRAMMAR: Explain the specific violation of the Emphatic structures (강조구문).

@@ -1,25 +1,34 @@
-🏗️ Module: Syntax (Automated Version)
-[STRICT_RULES]
 
+Syntax (Automated Version)
 [INPUT DATA]
-Vocabulary List: [VOCAB_LIST]
-Grammar Overlay: [GRAMMAR_OVERLAY]
-Target Word Count: [WORD_COUNT]
 
-Role: ESL Curriculum Developer (Naeshin Prep) 
-Task: Generate two distinct versions (A & B) of a vocabulary assessment using the Vocabulary List provided. 
+Vocabulary List: [Insert JSON list or raw list here]
 
-Instructions (Bilingual):
-문맥과 문법에 알맞은 단어의 형태를 고르시오. 각 문항에서 10점 만점을 받으려면 문법적 함정을 정당화할 수 있어야 합니다.
-Choose the correct form of the word. To earn the full 10 points per question, you must be able to justify the grammatical trap.
+Grammar Overlay: [e.g., Passive Voice / Relative Clauses / Subjunctive]
 
-[STRICT RULE]: Every sentence must use at least 2 words from the target list (Interleaving).
-[STRICT RULE]: You must integrate the Grammar Overlay into at least 40% of the sentence stems.
-[STRICT RULE]: No correct answers in bold. All choices (A, B, C, D) must look identical in formatting.
-[STRICT RULE]: Bilingual:Instructions and Teacher Key must be English/Korean.
+Target Word Count: [e.g., 10 or 15]
+
+Role: ESL Curriculum Developer (Naeshin Prep) Task: Generate two distinct versions (A & B) of a vocabulary assessment using the Vocabulary List provided. You must integrate the Grammar Overlay into at least 40% of the sentence stems.
+
+Strict Visual Rule:
+
+Bold all target vocabulary words used in the sentences.
+
+Distractor Logic (The 40/40/20 Rule):
+
+40% Word Class: (Noun/Adj/Adv swap).
+
+40% Functional: Focused on the Grammar Overlay (e.g., if the overlay is 'Passive Voice', distractors should be Active vs. Passive forms).
+
+20% Semantic: Nuance traps (e.g., sensible vs. sensitive).
 
 Teacher Key (Bilingual Rationale)
-Show how the Grammar Overlay was applied. Wrap answers in {{ }}.
-Follow this exact format for every question:
-Q1 Answer: {{ (Letter) }}
-Rationale: [Brief explanation of why that specific form is required].
+
+Show how the Grammar Overlay was applied.
+
+Q1 Answer: {{ (B) }}
+
+Selection (8 pts): Correctly identified the [Noun/Verb/etc] form. / [명사/동사 등] 형태를 올바르게 선택함.
+
+Trap Analysis (2 pts): Integrated the [Grammar Overlay Name] requirement. The student must recognize [Specific Rule]. / [문법 포인트] 요구 사항이 통합됨. 학생은 [특정 규칙]을 인식해야 함.
+
