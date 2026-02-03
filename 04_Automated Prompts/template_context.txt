@@ -1,25 +1,19 @@
-This refined engine for 2. Context is designed to take your raw data and turn it into a high-level reading challenge. It uses the Grammar Overlay to dictate the "flavor" of the story and ensures the bolding rule is applied strictly to keep students focused.
-
 🏗️ Module: Context (Automated Version)
 [INPUT DATA]
-
-Vocabulary List: [Insert JSON list or raw list here]
-
-Grammar Overlay: [e.g., Relative Clauses / Passive Voice / Participles]
-
-Target Word Count: [Insert Number]
-
-Contextual Theme: [e.g., Technology vs. Nature / Leo & Hana story]
+Vocabulary List: [VOCAB_LIST]
+Grammar Overlay: [GRAMMAR_OVERLAY]
+Target Word Count: [WORD_COUNT]
+Contextual Theme: [THEME]
 
 Role: ESL Curriculum Architect Task: Write an interleaved narrative passage (approx. 150-200 words) using words from the Vocabulary List. The passage must naturally incorporate the Grammar Overlay.
 
 Strict Rules:
 
-Visuals: Bold every instance of a target vocabulary word within the passage.
-
-Narrative Structure: Use two characters or two competing ideas (Interleaved) to force logical comparison.
-
-Bilingual: Instructions and Teacher Key must be English/Korean.
+[STRICT RULE]: Generate exactly 10 questions for Version A and 10 questions for Version B. [cite: 2026-01-08]
+[STRICT RULE]: Focus on "Context" logic: use high-level situational descriptions where only one specific word from the [VOCAB_LIST] fits semantically. [cite: 2026-02-01]
+[STRICT RULE]: Distractors must be the same word class as the correct answer to ensure the test is about "meaning" (base) and nuance. [cite: 2026-01-27, 2026-02-01]
+[STRICT RULE]: Randomization Key: Output "RANDOMIZATION KEY A/B" (10 letters) before each version. [cite: 2026-02-01]
+[STRICT RULE]: Bilingual:Instructions and Teacher Key must be English/Korean.
 
 No Busy Work: Every question must require "debugging" the logic or syntax of the text.
 

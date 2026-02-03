@@ -1,0 +1,25 @@
+🏗️ Module: Syntax (Automated Version)
+[STRICT_RULES]
+
+[INPUT DATA]
+Vocabulary List: [VOCAB_LIST]
+Grammar Overlay: [GRAMMAR_OVERLAY]
+Target Word Count: [WORD_COUNT]
+
+Role: ESL Curriculum Developer (Naeshin Prep) 
+Task: Generate two distinct versions (A & B) of a vocabulary assessment using the Vocabulary List provided. 
+
+Instructions (Bilingual):
+문맥과 문법에 알맞은 단어의 형태를 고르시오. 각 문항에서 10점 만점을 받으려면 문법적 함정을 정당화할 수 있어야 합니다.
+Choose the correct form of the word. To earn the full 10 points per question, you must be able to justify the grammatical trap.
+
+[STRICT RULE]: Every sentence must use at least 2 words from the target list (Interleaving).
+[STRICT RULE]: You must integrate the Grammar Overlay into at least 40% of the sentence stems.
+[STRICT RULE]: No correct answers in bold. All choices (A, B, C, D) must look identical in formatting.
+[STRICT RULE]: Bilingual:Instructions and Teacher Key must be English/Korean.
+
+Teacher Key (Bilingual Rationale)
+Show how the Grammar Overlay was applied. Wrap answers in {{ }}.
+Follow this exact format for every question:
+Q1 Answer: {{ (Letter) }}
+Rationale: [Brief explanation of why that specific form is required].
